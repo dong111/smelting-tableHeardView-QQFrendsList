@@ -16,6 +16,9 @@
 		2BDECEF61C704F75008B2341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECEF41C704F75008B2341 /* LaunchScreen.storyboard */; };
 		2BDECF011C704F75008B2341 /* _6_02_14____tableHeardView_QQ_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF001C704F75008B2341 /* _6_02_14____tableHeardView_QQ_____Tests.m */; };
 		2BDECF0C1C704F75008B2341 /* _6_02_14____tableHeardView_QQ_____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF0B1C704F75008B2341 /* _6_02_14____tableHeardView_QQ_____UITests.m */; };
+		2BDECF1F1C7057AF008B2341 /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECF1E1C7057AF008B2341 /* friends.plist */; };
+		2BDECF221C7057E9008B2341 /* CDFrendsGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF211C7057E9008B2341 /* CDFrendsGroup.m */; };
+		2BDECF251C705AF1008B2341 /* CDFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF241C705AF1008B2341 /* CDFriend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		2BDECF071C704F75008B2341 /* 16-02-14-熔炼-tableHeardView(QQ好友列表)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "16-02-14-熔炼-tableHeardView(QQ好友列表)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDECF0B1C704F75008B2341 /* _6_02_14____tableHeardView_QQ_____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_6_02_14____tableHeardView_QQ_____UITests.m"; sourceTree = "<group>"; };
 		2BDECF0D1C704F75008B2341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BDECF1E1C7057AF008B2341 /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
+		2BDECF201C7057E9008B2341 /* CDFrendsGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFrendsGroup.h; sourceTree = "<group>"; };
+		2BDECF211C7057E9008B2341 /* CDFrendsGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFrendsGroup.m; sourceTree = "<group>"; };
+		2BDECF231C705AF1008B2341 /* CDFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFriend.h; sourceTree = "<group>"; };
+		2BDECF241C705AF1008B2341 /* CDFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFriend.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				2BDECEF21C704F75008B2341 /* Assets.xcassets */,
+				2BDECF1E1C7057AF008B2341 /* friends.plist */,
 				2BDECEE41C704F75008B2341 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -150,8 +159,8 @@
 		2BDECF1A1C704FAA008B2341 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				2BDECEF41C704F75008B2341 /* LaunchScreen.storyboard */,
 				2BDECEEC1C704F75008B2341 /* Main.storyboard */,
+				2BDECEF41C704F75008B2341 /* LaunchScreen.storyboard */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -159,6 +168,10 @@
 		2BDECF1B1C704FB3008B2341 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				2BDECF201C7057E9008B2341 /* CDFrendsGroup.h */,
+				2BDECF211C7057E9008B2341 /* CDFrendsGroup.m */,
+				2BDECF231C705AF1008B2341 /* CDFriend.h */,
+				2BDECF241C705AF1008B2341 /* CDFriend.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 			files = (
 				2BDECEF61C704F75008B2341 /* LaunchScreen.storyboard in Resources */,
 				2BDECEF31C704F75008B2341 /* Assets.xcassets in Resources */,
+				2BDECF1F1C7057AF008B2341 /* friends.plist in Resources */,
 				2BDECEEE1C704F75008B2341 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDECF251C705AF1008B2341 /* CDFriend.m in Sources */,
 				2BDECEF11C704F75008B2341 /* _6_02_14____tableHeardView_QQ_____.xcdatamodeld in Sources */,
 				2BDECEEB1C704F75008B2341 /* ViewController.m in Sources */,
 				2BDECEE81C704F75008B2341 /* AppDelegate.m in Sources */,
 				2BDECEE51C704F75008B2341 /* main.m in Sources */,
+				2BDECF221C7057E9008B2341 /* CDFrendsGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +558,7 @@
 				2BDECF121C704F75008B2341 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BDECF131C704F75008B2341 /* Build configuration list for PBXNativeTarget "16-02-14-熔炼-tableHeardView(QQ好友列表)Tests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +567,7 @@
 				2BDECF151C704F75008B2341 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BDECF161C704F75008B2341 /* Build configuration list for PBXNativeTarget "16-02-14-熔炼-tableHeardView(QQ好友列表)UITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +576,7 @@
 				2BDECF181C704F75008B2341 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
