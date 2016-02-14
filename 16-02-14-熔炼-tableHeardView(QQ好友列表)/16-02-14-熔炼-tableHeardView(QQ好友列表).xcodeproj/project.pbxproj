@@ -19,6 +19,8 @@
 		2BDECF1F1C7057AF008B2341 /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BDECF1E1C7057AF008B2341 /* friends.plist */; };
 		2BDECF221C7057E9008B2341 /* CDFrendsGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF211C7057E9008B2341 /* CDFrendsGroup.m */; };
 		2BDECF251C705AF1008B2341 /* CDFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF241C705AF1008B2341 /* CDFriend.m */; };
+		2BDECF2E1C706EAB008B2341 /* CDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF2D1C706EAB008B2341 /* CDTableViewCell.m */; };
+		2BDECF351C709529008B2341 /* CDFriendGroupHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDECF341C709529008B2341 /* CDFriendGroupHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		2BDECF211C7057E9008B2341 /* CDFrendsGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFrendsGroup.m; sourceTree = "<group>"; };
 		2BDECF231C705AF1008B2341 /* CDFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFriend.h; sourceTree = "<group>"; };
 		2BDECF241C705AF1008B2341 /* CDFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFriend.m; sourceTree = "<group>"; };
+		2BDECF2C1C706EAB008B2341 /* CDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTableViewCell.h; sourceTree = "<group>"; };
+		2BDECF2D1C706EAB008B2341 /* CDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTableViewCell.m; sourceTree = "<group>"; };
+		2BDECF331C709529008B2341 /* CDFriendGroupHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFriendGroupHeaderView.h; sourceTree = "<group>"; };
+		2BDECF341C709529008B2341 /* CDFriendGroupHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFriendGroupHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,10 @@
 			children = (
 				2BDECEEC1C704F75008B2341 /* Main.storyboard */,
 				2BDECEF41C704F75008B2341 /* LaunchScreen.storyboard */,
+				2BDECF2C1C706EAB008B2341 /* CDTableViewCell.h */,
+				2BDECF2D1C706EAB008B2341 /* CDTableViewCell.m */,
+				2BDECF331C709529008B2341 /* CDFriendGroupHeaderView.h */,
+				2BDECF341C709529008B2341 /* CDFriendGroupHeaderView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -328,8 +338,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BDECF251C705AF1008B2341 /* CDFriend.m in Sources */,
+				2BDECF2E1C706EAB008B2341 /* CDTableViewCell.m in Sources */,
 				2BDECEF11C704F75008B2341 /* _6_02_14____tableHeardView_QQ_____.xcdatamodeld in Sources */,
 				2BDECEEB1C704F75008B2341 /* ViewController.m in Sources */,
+				2BDECF351C709529008B2341 /* CDFriendGroupHeaderView.m in Sources */,
 				2BDECEE81C704F75008B2341 /* AppDelegate.m in Sources */,
 				2BDECEE51C704F75008B2341 /* main.m in Sources */,
 				2BDECF221C7057E9008B2341 /* CDFrendsGroup.m in Sources */,
