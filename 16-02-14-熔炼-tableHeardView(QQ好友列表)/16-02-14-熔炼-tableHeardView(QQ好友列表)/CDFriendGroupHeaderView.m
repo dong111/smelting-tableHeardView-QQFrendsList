@@ -45,6 +45,9 @@
 //        self.nameView.imageView.image = [UIImage imageNamed:@"buddy_header_arrow"]; //这样设置图片不成功，imageView属性是readonly
         [self.nameView setImage:[UIImage imageNamed:@"buddy_header_arrow"] forState:UIControlStateNormal];
         [self.nameView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        //图标移除剪切效果
+        self.nameView.contentMode = UIViewContentModeCenter;
+        self.nameView.clipsToBounds = NO;
         
         //Label设置
         UILabel *lable = [[UILabel alloc] init];
@@ -69,6 +72,15 @@
     }
 }
 
+- (void)didMoveToSuperview
+{
+    //展开，合并按钮图标旋转
+    if (self.friendsGroup.isOpenGroup) {
+        self.nameView.imageView.transform = CGAffineTransformMakeRotation(M_PI_2);
+    }else{
+        self.nameView.imageView.transform = CGAffineTransformMakeRotation(0);
+    }
+}
 
 //继承该方法用来描述子控件的frame
 - (void)layoutSubviews
