@@ -38,7 +38,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     CDFriendGroupHeaderView *headerView = [CDFriendGroupHeaderView headerViewWithTableView:tableView];
-    
+    headerView.friendsGroup = self.friendroups[section];
     
     return headerView;
 }

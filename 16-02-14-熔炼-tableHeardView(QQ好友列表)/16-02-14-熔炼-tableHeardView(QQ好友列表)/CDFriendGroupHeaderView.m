@@ -42,23 +42,39 @@
 //        self.nameView.imageView.image = [UIImage imageNamed:@"buddy_header_arrow"]; //这样设置图片不成功，imageView属性是readonly
         [self.nameView setImage:[UIImage imageNamed:@"buddy_header_arrow"] forState:UIControlStateNormal];
         [self.nameView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self.nameView setTitle:@"haha" forState:UIControlStateNormal];
+        
+        //Label设置
+        UILabel *lable = [[UILabel alloc] init];
+        self.countView = lable;
+        [self.contentView addSubview:lable];
+        
     }
     return self;
 }
+
+
+
+
 //继承该方法用来描述子控件的frame
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     self.nameView.frame  = self.bounds;
-    NSLog(@"%@",NSStringFromCGRect(self.bounds));
+    //设置label的frame
+    CGFloat countW = 50;
+    CGFloat countX = self.bounds.size.width - 10 -countW ;
+    CGFloat countY = 0;
+    CGFloat countH = self.bounds.size.height;
+    self.countView.frame = CGRectMake(countX, countY, countW, countH);
 }
 
-
+//给子控件赋值
 - (void)setFriendsGroup:(CDFrendsGroup *)friendsGroup
 {
     _friendsGroup = friendsGroup;
-    
+    [self.nameView setTitle:friendsGroup.name forState:UIControlStateNormal];
+    NSString *countText =  [NSString stringWithFormat:@"%ld/%ld",friendsGroup.online,friendsGroup.friends.count];
+    [self.countView setText:countText];
     
 }
 
