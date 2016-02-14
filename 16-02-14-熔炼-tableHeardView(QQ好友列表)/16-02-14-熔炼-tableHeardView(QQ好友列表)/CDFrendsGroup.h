@@ -24,6 +24,8 @@
 @property (nonatomic,assign) NSInteger online;
 
 
+@property (nonatomic,assign,getter=isOpenGroup) BOOL openGroup;
+
 - (instancetype) initWithDic:(NSDictionary *)dic;
 
 + (instancetype) frendGroupWithDic:(NSDictionary *)dic;

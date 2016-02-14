@@ -16,6 +16,7 @@
 @property (nonatomic,assign) NSInteger vip;
 
 
+
 - (instancetype) initWithDic:(NSDictionary *)dic;
 
 + (instancetype) friendWithDic:(NSDictionary *)dic;

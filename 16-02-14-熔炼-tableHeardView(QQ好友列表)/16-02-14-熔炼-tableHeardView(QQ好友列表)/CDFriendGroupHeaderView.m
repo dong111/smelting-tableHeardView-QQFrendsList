@@ -11,7 +11,10 @@
 @interface CDFriendGroupHeaderView ()
 @property (nonatomic,weak) UIButton *nameView;
 @property (nonatomic,weak) UILabel *countView;
+
 @end
+
+
 
 @implementation CDFriendGroupHeaderView
 
@@ -48,11 +51,23 @@
         self.countView = lable;
         [self.contentView addSubview:lable];
         
+        
+        //添加按钮事件代理
+        [self.nameView addTarget:self action:@selector(nameBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
-
-
+/**
+ *  名称按钮点击事件
+ */
+- (void) nameBtnClick:(CDFriendGroupHeaderView *)headerView
+{
+    self.friendsGroup.openGroup = !self.friendsGroup.openGroup;
+    //通知viewControll 重新加载数据
+    if ([self.delegate respondsToSelector:@selector(groupBtnClick:)]) {
+        [self.delegate groupBtnClick:self];
+    }
+}
 
 
 //继承该方法用来描述子控件的frame

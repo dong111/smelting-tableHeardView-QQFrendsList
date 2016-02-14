@@ -7,10 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CDFrendsGroup.h"
-#import "CDFriend.h"
-#import "CDTableViewCell.h"
-#import "CDFriendGroupHeaderView.h"
+
 @interface ViewController ()
 
 @property (nonatomic,strong) NSArray *friendroups;
@@ -31,7 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //测试数据
-    NSLog(@"%ld",self.friendroups.count);
+//    NSLog(@"%ld",self.friendroups.count);
+    
 }
 
 
@@ -39,7 +37,7 @@
 {
     CDFriendGroupHeaderView *headerView = [CDFriendGroupHeaderView headerViewWithTableView:tableView];
     headerView.friendsGroup = self.friendroups[section];
-    
+    headerView.delegate = self;
     return headerView;
 }
 
@@ -52,8 +50,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
      CDFrendsGroup *friendGroup = self.friendroups[section];
-    return friendGroup.friends.count;
+    
+    return friendGroup.isOpenGroup?friendGroup.friends.count:0;
 }
+
+- (void)groupBtnClick:(id)headerView
+{
+    [self.tableView reloadData];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CDFrendsGroup *friendGroup =  self.friendroups[indexPath.section];

@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UITableViewController
+#import "CDFrendsGroup.h"
+#import "CDFriend.h"
+#import "CDTableViewCell.h"
+#import "CDFriendGroupHeaderView.h"
+@interface ViewController : UITableViewController <CDFriendGroupHeaderViewDelegate>
 
 
 @end

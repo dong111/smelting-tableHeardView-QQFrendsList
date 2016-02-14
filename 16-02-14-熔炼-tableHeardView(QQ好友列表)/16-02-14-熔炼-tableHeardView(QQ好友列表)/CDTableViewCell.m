@@ -24,6 +24,8 @@
 - (void)setFriend:(CDFriend *)friend
 {
     _friend = friend;
+    
+    
     self.imageView.image = [UIImage imageNamed:self.friend.icon];
     self.textLabel.text = self.friend.name;
     if (self.friend.vip==1) {
